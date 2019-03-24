@@ -2,9 +2,11 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
 import LifeCycle from './LifeCycle'
+import State from './State'
 
 ReactDOM.render(
-  <App/>,
+  // <App/>,
+  <State/>,
   document.getElementById('root')
 )
 
@@ -17,6 +19,6 @@ function tick() {
 }
 
 // // 每隔一秒执行一次tick函数，调用一次render
-setInterval(() => {
-  tick()
-}, 1000);
+// setInterval(() => {
+//   tick()
+// }, 1000);

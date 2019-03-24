@@ -17,7 +17,25 @@ this.setState((prevState, prevProps)=>{
 })
 ```
 - 定时器会占据内存，组件卸载时要清除
+- 数组push数据更优雅的写法
+```js
+this.setState(prevState=>{
+  // 这里可以对prevState做数据处理
+  return {
+    goodsList: [...prevState, {
+      id: 1,
+      price: '123'
+    }]
+  }
+})
 ```
+- 为什么展示一定要用map方法而不用其他的
+- 优雅的寻找购物车item方法
+```js
+const goodsList =[...this.state.goodsList]
+const index = goodsList.findInde(item=>item.id===id)
+const item = goodsList[index]
 ```
+- diff算法
 
 学习至1：10
