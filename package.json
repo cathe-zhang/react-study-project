@@ -3,15 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "ant-mobile": "0.0.0",
+    "antd-mobile": "^2.2.11",
+    "babel-plugin-import": "^1.11.0",
     "react": "^16.8.5",
+    "react-app-rewired": "^2.0.2-next.0",
     "react-dom": "^16.8.5",
     "react-scripts": "2.1.8"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-app-rewired start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "hold": "react-app-rewired start"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -21,5 +26,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "babel-plugin-transform-decorators-legacy": "^1.3.5"
+  }
 }

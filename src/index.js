@@ -3,10 +3,18 @@ import ReactDOM from 'react-dom'
 import App from './App'
 import LifeCycle from './LifeCycle'
 import State from './State'
+import CommentList from './components/commentList';
+import Composition from './components/Composition';
+import Hoc from './components/HOC'
+import Context from './components/context';
 
 ReactDOM.render(
   // <App/>,
-  <State/>,
+  // <CommentList />,
+  // <Composition />,
+  // <Hoc level="react" />,
+  <Context />,
+  // <State/>,
   document.getElementById('root')
 )
 

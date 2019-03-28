@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
+import { Button } from 'antd-mobile'  // 具名导入
 
 // 函数型组件
-const Welcome = ( props ) => {
-  return (
-    <div>
-      Hello, {props.text}
-    </div>
-  )
-}
+const Welcome = ( props ) => (
+  <div>
+  Hello, {props.text}
+</div>
+)
 
 export default class App extends Component {
 
@@ -33,6 +32,7 @@ export default class App extends Component {
       <div>
         app组件
         <h1>{name}</h1>
+        <Button type="primary">添加购物车</Button>
         {/* 组件属性传值 */}
         <Welcome text="cellerchan" />
       </div>
