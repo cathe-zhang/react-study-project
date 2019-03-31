@@ -7,13 +7,15 @@ import CommentList from './components/commentList';
 import Composition from './components/Composition';
 import Hoc from './components/HOC'
 import Context from './components/context';
+import KFormSample from './components/KFormTest';
 
 ReactDOM.render(
   // <App/>,
   // <CommentList />,
   // <Composition />,
   // <Hoc level="react" />,
-  <Context />,
+  // <Context />,
+  <KFormSample />,
   // <State/>,
   document.getElementById('root')
 )

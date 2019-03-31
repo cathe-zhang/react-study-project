@@ -10,9 +10,9 @@ module.exports = function override ( config, env ) {
   ], config)   // 自定义配置作为第一个数组，webpack默认配置作为第二个参数
 
   // 添加装饰器的能力  需要注释掉，否则会报错
-  // config = injectBabelPlugin([  
-  //   ['@babel/plugin-proposal-decorators', {"legacy": true}]
-  // ],config)
+  config = injectBabelPlugin([  
+    ['@babel/plugin-proposal-decorators', {"legacy": true}]
+  ],config)
   
   return config;
 }
