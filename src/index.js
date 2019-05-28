@@ -13,9 +13,9 @@ ReactDOM.render(
   // <App/>,
   // <CommentList />,
   // <Composition />,
-  // <Hoc level="react" />,
+  <Hoc level="react" />,
   // <Context />,
-  <KFormSample />,
+  // <KFormSample />,
   // <State/>,
   document.getElementById('root')
 )
