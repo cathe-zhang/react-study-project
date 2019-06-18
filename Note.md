@@ -59,11 +59,14 @@ injectBabelPlugin插件 config.overrides.js
 
 
 #### 容器组件 VS 展示组件  (智能组件，木偶组件)
-基本原则：容器组件(业务组件)负责数据获取，有很重的业务逻辑在其中；展示组件负责根据props进行数据展示。
+基本原则：容器组件(业务组件)负责数据获取，具体逻辑，有很重的业务逻辑在其中，复用性低；展示组件负责根据props进行数据展示，复用性高。
+
+componentWillMount有可能被移除
 
 shouldComponentUpdate
 想要利用PureComponent的特性的原则：
 - 确保数据类型是值类型  JSON.stringify可以做到，但是这个方法本身也是耗费性能
+- 如果是引用类型，确保地址不变，同时不应当有深层次的数据变化
 ```javascript
 <Comment
   key={i}
@@ -79,7 +82,6 @@ shouldComponentUpdate
   {...e}   // 相当于分别传入body和author 与前一种写法相同
 />
 ```
-- 如果是引用类型，确保地址不变，同时不应当有深层次的数据变化
 
 > 解构是浅拷贝
 
@@ -87,6 +89,7 @@ PureComponent react15之后新增的特性， 实现了一个预定义的比较�
 
 React.memo 高阶组件 传入一个组件
 
+rfc 创建函数组件快捷键
 
 #### 组件复合而非组件继承
 - 不使用继承，没有复合解决不了只有继承才能解决的问题  composition.js   一切皆组件  props.children
@@ -98,7 +101,7 @@ React.memo 高阶组件 传入一个组件
 高阶组件其实是函数，接收一个组件，返回另外一个组件，产生新的组件可以对属性进行包装，也可以重写部分生命周期。
 如下：
 ```js
-// 本身的组件是不具备PureComponent组件的能力，使用React.memo包装之后使得原组件具备了PureComponent能力，所以React.memo是一个高阶组件。
+// 本身函数组件不具备PureComponent组件的能力，使用React.memo包装之后使得原组件具备了PureComponent能力，所以React.memo是一个高阶组件。
 const Comment = React.memo( ({author, body}) => {
   console.log('render')
   return (
@@ -148,4 +151,7 @@ vuejs的provide&inject模式的来源  --- context
 Object.create方法（课外）
 
 
+React的未来
+ fiber
 
+思考createContext是怎么实现的

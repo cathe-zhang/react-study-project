@@ -9,41 +9,40 @@ import React, { Component, PureComponent } from 'react';
 //   )
 // }
 
-// class Comment extends PureComponent {
+class Comment extends PureComponent {
 
-//   // shouldComponentUpdate(nextProps, nextState) {
-//   //   if ( nextProps.data.body ===  this.props.data.body && 
-//   //        nextProps.data.author ===  this.props.data.author  ) {
-//   //     return false
-//   //   }
-//   //   return true
-//   // }
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   if ( nextProps.data.body ===  this.props.data.body && 
+  //        nextProps.data.author ===  this.props.data.author  ) {
+  //     return false
+  //   }
+  //   return true
+  // }
   
   
-//   render(){
-//     // const { data } = this.props
-//     const { author, body } = this.props
-//     console.log('render')
-//     return (
-//       <div>
-//         <p>作者：{author}</p>
-//         <p>内容：{body}</p>
-//       </div>
-//     )
-//   }
-// }
+  render(){
+    // const { data } = this.props
+    const { author, body } = this.props
+    console.log('render')
+    return (
+      <div>
+        <p>作者：{author}</p>
+        <p>内容：{body}</p>
+      </div>
+    )
+  }
+}
 
-
-// 高阶组件
-const Comment = React.memo( ({author, body}) => {
-  console.log('render')
-  return (
-    <div>
-      <p>作者：{author}</p>
-      <p>内容：{body}</p>
-    </div>
-  )
-})
+// // 高阶组件
+// const Comment = React.memo( ({author, body}) => {
+//   console.log('render')
+//   return (  
+//     <div>
+//       <p>作者：{author}</p>
+//       <p>内容：{body}</p>
+//     </div>
+//   )
+// })
 
 
 
@@ -57,6 +56,7 @@ class CommentList extends Component {
   }
 
   componentDidMount(){
+    // 每隔一秒更新数据
     setInterval(() => {
       this.setState({
         comments: [

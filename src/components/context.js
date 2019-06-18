@@ -14,7 +14,7 @@ export default class ContextSample extends Component {
     return (
       <div>
         {/* 最外层使用Provider包围 */}
-        {/* value是固定写法 */}
+        {/* 传入的值必须是value，是固定写法 */}
         <context.Provider value={store}>
           <div>
             {/* 跨层级 */}
@@ -23,7 +23,8 @@ export default class ContextSample extends Component {
             <context.Consumer>
               {/* 必须内嵌一个函数 */}
               {
-                value => <div onClick={value.sayHi}>{value.name}</div>
+                // 这里是形参 名称随便写 值就是provider传进来的值
+                cast => <div onClick={()=>cast.sayHi()}>{cast.name}</div>
               }
             </context.Consumer>
           </div>

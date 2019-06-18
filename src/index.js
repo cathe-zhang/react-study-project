@@ -13,8 +13,8 @@ ReactDOM.render(
   // <App/>,
   // <CommentList />,
   // <Composition />,
-  <Hoc level="react" />,
-  // <Context />,
+  // <Hoc level="react" />,
+  <Context />,
   // <KFormSample />,
   // <State/>,
   document.getElementById('root')

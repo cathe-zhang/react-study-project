@@ -9,7 +9,7 @@ const withLog = Comp => {
 // 高阶函数装饰器写法 可以多次使用
 @withLog
 @withName   
-@withLog
+// @withLog
 class kaikeba extends Component {
   render() {
     return (
@@ -17,8 +17,6 @@ class kaikeba extends Component {
     )
   }
 }
-// function kaikeba(props) {
-// }
 
 // 高阶组件
 function withName(Comp) {
