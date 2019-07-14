@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 // 高阶组件 使得组件具有日志记录的功能
 const withLog = Comp => {
-  console.log(Comp.name+'渲染了')
+  // console.log(Comp.name+'渲染了')
   return props => <Comp {...props} />
 }
 

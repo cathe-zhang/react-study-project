@@ -4,12 +4,18 @@
   "private": true,
   "dependencies": {
     "ant-mobile": "0.0.0",
+    "antd": "^3.19.5",
     "antd-mobile": "^2.2.11",
     "babel-plugin-import": "^1.11.0",
     "react": "^16.8.5",
     "react-app-rewired": "^2.0.2-next.0",
     "react-dom": "^16.8.5",
-    "react-scripts": "2.1.8"
+    "react-redux": "^7.1.0",
+    "react-router-dom": "^4.0.0",
+    "react-scripts": "2.1.8",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-app-rewired start",
